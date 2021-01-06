@@ -29,9 +29,7 @@ public class Application {
 
     @Bean
     public CommandLineRunner runner() {
-        return (args) -> {
-            customerRepository.saveAll(createCustomers());
-        };
+        return (args) -> customerRepository.saveAll(createCustomers());
     }
 
     private List<Customer> createCustomers() {
